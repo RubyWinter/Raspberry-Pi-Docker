@@ -1,0 +1,19 @@
+Docker Installation (after writing image to disk)
+
+//check for and install updates
+sudo apt update
+sudo apt upgrade -y
+sudo reboot
+
+//get docker image
+curl -sSL https://get.docker.com | sh
+
+//allow non-admin users
+sudo usermod -aG docker $USER
+sudo reboot
+
+//check containers
+docker ps
+
+//add first container
+docker run hello-world
